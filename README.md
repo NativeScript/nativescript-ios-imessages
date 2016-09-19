@@ -8,7 +8,8 @@
 1. Add a new target to your Xcode app project through File > New > Target and choose the iMessage template.
 1. Delete MessagesViewController.h, MessagesViewController.m and MainInterface.storyboard files from the extension folder
 1. Click on the project on the upper left in the file browser, click on the project again in the second-to-left panel, and click on the Info tab at the top of the inner panel. Set tne platforms/ios/[project_name]/build.xcconfig as your extension target Based on Configuration File 
-1. Click on the project on the upper left in the file browser, click on the extension target in the second-to-left panel, and click the Build Phases pane. Then create new run script phase with the following script content ``` "$SRCROOT/internal/nativescript-pre-build" ```
+1. Click on the project on the upper left in the file browser, click on the extension target in the second-to-left panel, and click the Build Phases pane. Then create new run script phase with the following script content ``` "$SRCROOT/internal/nativescript-pre-build" ``` and make sure this is at the top of the list directly under `Target Dependencies`
+1. Then click `Copy Bundle Resources` and add your host applications `app` folder.
 1. Right-click the [extension name folder] >> SupportingFiles and add a new Objective-C file naming it main.m with the following content
   ```c++
   
